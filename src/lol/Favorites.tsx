@@ -37,17 +37,21 @@ export default function Favorites() {
 
   const list = () => (
     <Box
-      sx={{ width: 400 }}
+      sx={{ width: "100%" }}
       role="presentation"
       onClick={toggleDrawer("right", false)}
       onKeyDown={toggleDrawer("right", false)}
     >
-      <div className="mt-[280px] p-5">
-      <h3 className="text-center text-2xl font-semibold my-2">Start planning your Trip</h3>
-      <h4 className="text-center text-sm mb-3">
-        Save flights, hotels and more so you can easily jump back in to Trips.
-      </h4>
-      <Button className="flex mx-auto" variant="outlined">Find a destination</Button>
+      <div className="mt-[50%] p-5">
+        <h3 className="text-center text-2xl font-semibold my-2">
+          Start planning your Trip
+        </h3>
+        <h4 className="text-center text-sm mb-3">
+          Save flights, hotels and more so you can easily jump back in to Trips.
+        </h4>
+        <Button className="flex mx-auto" variant="outlined">
+          Find a destination
+        </Button>
       </div>
     </Box>
   );

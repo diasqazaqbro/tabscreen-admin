@@ -10,7 +10,7 @@ import {
   Menu,
   MenuItem,
 } from "@mui/material";
-import React, { useState } from "react";
+import React, { ReactNode, useState } from "react";
 import ReorderSharpIcon from "@mui/icons-material/ReorderSharp";
 import FavoriteSharpIcon from "@mui/icons-material/FavoriteSharp";
 import KeyboardArrowDownSharpIcon from "@mui/icons-material/KeyboardArrowDownSharp";
@@ -21,7 +21,11 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { deepOrange } from "@mui/material/colors";
 import Favorites from "./Favorites";
 import { Logout, PersonAdd, Settings } from "@mui/icons-material";
-const Sidebar = () => {
+
+interface MyComponentProps {
+  children: ReactNode;
+}
+const Sidebar: React.FC<MyComponentProps> = ({ children }) => {
   const [open, setOpen] = useState(false);
   const [value, setValue] = React.useState("recents");
 
@@ -45,77 +49,80 @@ const Sidebar = () => {
           <div className="">
             <Favorites />
           </div>
-          <div className="flex items-center">
+          <div
+            onClick={handleClick}
+            className="flex items-center cursor-pointer"
+          >
             <Avatar sx={{ bgcolor: deepOrange[500], width: 30, height: 30 }}>
               D
             </Avatar>
-            <h3 onClick={handleClick}  className="px-2">Dias</h3>
+            <h3 className="px-2">Dias</h3>
             <KeyboardArrowDownSharpIcon />
-            <Menu
-              anchorEl={anchorEl}
-              id="account-menu"
-              open={isOpen}
-              onClose={handleClose}
-              onClick={handleClose}
-              PaperProps={{
-                elevation: 0,
-                sx: {
-                  overflow: "visible",
-                  filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
-                  mt: 1.5,
-                  "& .MuiAvatar-root": {
-                    width: 32,
-                    height: 32,
-                    ml: -0.5,
-                    mr: 1,
-                  },
-                  "&:before": {
-                    content: '""',
-                    display: "block",
-                    position: "absolute",
-                    top: 0,
-                    right: 14,
-                    width: 10,
-                    height: 10,
-                    bgcolor: "background.paper",
-                    transform: "translateY(-50%) rotate(45deg)",
-                    zIndex: 0,
-                  },
-                },
-              }}
-              transformOrigin={{ horizontal: "right", vertical: "top" }}
-              anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
-            >
-              <MenuItem onClick={handleClose}>
-                <Avatar /> Profile
-              </MenuItem>
-              <MenuItem onClick={handleClose}>
-                <Avatar /> My account
-              </MenuItem>
-              <Divider />
-              <MenuItem onClick={handleClose}>
-                <ListItemIcon>
-                  <PersonAdd fontSize="small" />
-                </ListItemIcon>
-                Add another account
-              </MenuItem>
-              <MenuItem onClick={handleClose}>
-                <ListItemIcon>
-                  <Settings fontSize="small" />
-                </ListItemIcon>
-                Settings
-              </MenuItem>
-              <MenuItem onClick={handleClose}>
-                <ListItemIcon>
-                  <Logout fontSize="small" />
-                </ListItemIcon>
-                Logout
-              </MenuItem>
-            </Menu>
           </div>
+          <Menu
+            anchorEl={anchorEl}
+            id="account-menu"
+            open={isOpen}
+            onClose={handleClose}
+            onClick={handleClose}
+            PaperProps={{
+              elevation: 0,
+              sx: {
+                overflow: "visible",
+                filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
+                mt: 1.5,
+                "& .MuiAvatar-root": {
+                  width: 32,
+                  height: 32,
+                  ml: -0.5,
+                  mr: 1,
+                },
+                "&:before": {
+                  content: '""',
+                  display: "block",
+                  position: "absolute",
+                  top: 0,
+                  right: 14,
+                  width: 10,
+                  height: 10,
+                  bgcolor: "background.paper",
+                  transform: "translateY(-50%) rotate(45deg)",
+                  zIndex: 0,
+                },
+              },
+            }}
+            transformOrigin={{ horizontal: "right", vertical: "top" }}
+            anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
+          >
+            <MenuItem onClick={handleClose}>
+              <Avatar /> Profile
+            </MenuItem>
+            <MenuItem onClick={handleClose}>
+              <Avatar /> My account
+            </MenuItem>
+            <Divider />
+            <MenuItem onClick={handleClose}>
+              <ListItemIcon>
+                <PersonAdd fontSize="small" />
+              </ListItemIcon>
+              Add another account
+            </MenuItem>
+            <MenuItem onClick={handleClose}>
+              <ListItemIcon>
+                <Settings fontSize="small" />
+              </ListItemIcon>
+              Settings
+            </MenuItem>
+            <MenuItem onClick={handleClose}>
+              <ListItemIcon>
+                <Logout fontSize="small" />
+              </ListItemIcon>
+              Logout
+            </MenuItem>
+          </Menu>
         </div>
       </header>
-      <aside className={`${open ? "w-[83px]" : "w-[200px]"} hidden sm:block`}>
+      <aside className={`${open ? "w-[83px]" : "md:w-[200px] w-[100%]"}`}>
         <ul className="">
           <li className="w-[100%] hover:bg-neutral-200 py-2 px-5 rounded-md my-2">
             <a href="/flights" className="flex items-center">
@@ -133,19 +140,7 @@ const Sidebar = () => {
           </li>
         </ul>
       </aside>
-      <div className="fixed bottom-0 left-0 right-0 bg-white p-4 block sm:hidden shadow-md">
-        <BottomNavigation
-          showLabels
-          value={value}
-          onChange={(event, newValue) => {
-            setValue(newValue);
-          }}
-        >
-          <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
-          <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-          <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
-        </BottomNavigation>
-      </div>
+      <div className={`${open ? 'ml-16' : 'ml-48'}`}>{children}</div>
     </>
   );
 };

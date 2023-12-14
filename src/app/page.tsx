@@ -3,7 +3,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <><Sidebar/></>
+    <><Sidebar>hello world</Sidebar></>
   )
 };
 

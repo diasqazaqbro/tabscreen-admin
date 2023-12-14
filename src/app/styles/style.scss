@@ -1,0 +1,26 @@
+header {
+  background: #fff;
+  border-bottom: 1px solid #d9e2e8;
+}
+
+aside {
+  background: #fff;
+  height: 100%;
+  transition: width 110ms cubic-bezier(0.6, 0, 1, 1),
+    transform 110ms cubic-bezier(0.6, 0, 1, 1);
+  border-right: 1px solid #d9e2e8;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  overflow: hidden auto;
+  position: absolute;
+  left: 0;
+  top: 81px;
+}
+
+.help {
+    .welcome {
+        background-image: url("https://content.r9cdn.net/res/images/horizon/ui/corporate/corporate_hero_background.jpg?v=89e112be8e639e1d99eb6120b6cb0ac44298bb63&cluster=5");
+    }
+}
