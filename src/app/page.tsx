@@ -21,7 +21,7 @@ const page = () => {
   return (
     <Sidebar>
       <section className="index">
-        <div className="welcome sm:py-40 bg-no-repeat">
+        <div className="welcome sm:py-40 py-20 bg-no-repeat">
           <div className="mx-auto flex flex-col items-center">
             <TabsFilter />
           </div>
@@ -113,11 +113,11 @@ const page = () => {
           </List>
         </div>
         <div className="sm:px-24 px-10 py-10">
-          <div className="flex ">
-            <div className="w-[50%]">
+          <div className="block md:flex">
+            <div className="w-[100%] sm:w-[50%]">
               <div className="w-[100%] h-[100%] bg-primary"></div>
             </div>
-            <div className="w-[50%] p-4 px-5">
+            <div className="w-[100%] sm:w-[50%] p-4 px-5">
               <h1 className="text-2xl mb-2 font-semibold">TrussTravel AI</h1>
               <p className="text-sm">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -137,8 +137,8 @@ const page = () => {
             Lorem ipsum dolor sit amet. Lorem, ipsum dolor sit amet consectetur
             adipisicing elit. Sapiente, facilis.
           </h2>
-          <div className="my-5 flex justify-between">
-            <Card sx={{ maxWidth: '48%', borderRadius: '20px' }}>
+          <div className="my-5 block md:flex justify-between">
+            <Card sx={{ maxWidth: '100%', borderRadius: '20px', margin: '20px 10px' }}>
               <CardActionArea>
                 <CardMedia
                   component="img"
@@ -161,7 +161,7 @@ const page = () => {
                 </Button>
               </CardActions>
             </Card>
-            <Card sx={{ maxWidth: '48%', borderRadius: '20px' }}>
+            <Card sx={{ maxWidth: '100%', borderRadius: '20px', margin: '20px 10px' }}>
               <CardActionArea>
                 <CardMedia
                   component="img"
