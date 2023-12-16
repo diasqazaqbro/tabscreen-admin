@@ -4,6 +4,7 @@ import "./styles/globals.css";
 import "./styles/style.scss";
 
 import ReduxProvider from "@/shared/provider/ReduxProvider";
+import Dial from "@/lol/Dial";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={montserrat.className}>
         <ReduxProvider>{children}</ReduxProvider>
+        
       </body>
     </html>
   );

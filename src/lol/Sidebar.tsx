@@ -21,6 +21,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { deepOrange } from "@mui/material/colors";
 import Favorites from "./Favorites";
 import { Logout, PersonAdd, Settings } from "@mui/icons-material";
+import Dial from "./Dial";
 
 interface MyComponentProps {
   children: ReactNode;
@@ -140,7 +141,8 @@ const Sidebar: React.FC<MyComponentProps> = ({ children }) => {
           </li>
         </ul>
       </aside>
-      <div className={`${open ? 'ml-16' : 'ml-48'}`}>{children}</div>
+      <div className={`${open ? "ml-16" : "ml-48"}`}>{children}</div>
+      <Dial />
     </>
   );
 };

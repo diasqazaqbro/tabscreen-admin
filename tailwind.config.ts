@@ -5,10 +5,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "##90CAFA",
+        primary: "#1A76D2",
         gray: "#868E99",
         secondary: "#111",
         white: "#FFF",
+      },
+      backgroundColor: {
+        primary: "#1A76D2",
       },
     },
   },

@@ -19,8 +19,19 @@ aside {
   top: 81px;
 }
 
+.index {
+  .welcome {
+      background-image: url("/alma.png");
+  }
+  .MuiButtonBase-root {
+  }
+}
+
+
 .help {
     .welcome {
         background-image: url("https://content.r9cdn.net/res/images/horizon/ui/corporate/corporate_hero_background.jpg?v=89e112be8e639e1d99eb6120b6cb0ac44298bb63&cluster=5");
     }
 }
+
+
