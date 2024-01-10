@@ -60,14 +60,14 @@ const UserEdit: React.FC<UserEditProps> = ({ id, groupId, name, mac,roleId }) =>
   };
 
   const [selectedGroup, setSelectedGroup] = useState<number>(groupId);
-  const [selectedRole, setSelectedRole] = useState<string>(roleId.toString());
+  const [selectedRole, setSelectedRole] = useState<number>(roleId);
 
   const handleGroupChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedGroup(Number(event.target.value));
   };
   
   const handleRoleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelectedRole(event.target.value);
+    setSelectedRole(Number(event.target.value));
   };
 
   useEffect(() => {
