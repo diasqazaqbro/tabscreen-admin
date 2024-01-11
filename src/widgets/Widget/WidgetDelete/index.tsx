@@ -23,7 +23,7 @@ const WidgetDelete:React.FC<WidgetDeleteProps> = ({name, id}) => {
   const handleCreateGroup = () => {
     axios
       .delete(
-        `https://tabscreen-production.up.railway.app/api/admin/widget/${id}/`,
+        `https://cloudpaymentsapi.kz/api/admin/widget/${id}/`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

@@ -28,7 +28,7 @@ const UserCreate = () => {
   const handleCreateGroup = () => {
     axios
       .post(
-        "https://tabscreen-production.up.railway.app/api/admin/user/create/",
+        "https://cloudpaymentsapi.kz/api/admin/user/create/",
         {
           username: username,
           mac_address: macAddress,
@@ -54,7 +54,7 @@ const UserCreate = () => {
 
   useEffect(() => {
     axios
-      .get("https://tabscreen-production.up.railway.app/api/admin/group/", {
+      .get("https://cloudpaymentsapi.kz/api/admin/group/", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

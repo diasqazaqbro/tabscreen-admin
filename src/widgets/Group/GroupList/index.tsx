@@ -33,21 +33,21 @@ const GroupList = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const groupResponse = await axios.get("https://tabscreen-production.up.railway.app/api/admin/group/", {
+        const groupResponse = await axios.get("https://cloudpaymentsapi.kz/api/admin/group/", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
         });
         setGroup(groupResponse.data);
 
-        const videoResponse = await axios.get("https://tabscreen-production.up.railway.app/api/admin/video/", {
+        const videoResponse = await axios.get("https://cloudpaymentsapi.kz/api/admin/video/", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
         });
         setGetVideo(videoResponse.data);
 
-        const userResponse = await axios.get("https://tabscreen-production.up.railway.app/api/admin/user/", {
+        const userResponse = await axios.get("https://cloudpaymentsapi.kz/api/admin/user/", {
           headers: {
             Authorization: `Bearer ${token}`,
           },

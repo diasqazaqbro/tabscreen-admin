@@ -24,7 +24,7 @@ const GroupDelete:React.FC<GroupDeleteProps> = ({name, id}) => {
   const handleCreateGroup = () => {
     axios
       .delete(
-        `https://tabscreen-production.up.railway.app/api/admin/group/${id}`,
+        `https://cloudpaymentsapi.kz/api/admin/group/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

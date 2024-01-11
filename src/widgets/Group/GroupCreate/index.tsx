@@ -19,7 +19,7 @@ const GroupCreate = () => {
   const handleCreateGroup = () => {
     axios
       .post(
-        "https://tabscreen-production.up.railway.app/api/admin/group/create/",
+        "https://cloudpaymentsapi.kz/api/admin/group/create/",
         {
           title: title,
         },

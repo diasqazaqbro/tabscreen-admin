@@ -12,7 +12,7 @@ const NewAdmin = () => {
   const handleSubmit = () => {
     axios
       .post(
-        "https://tabscreen-production.up.railway.app/api/admin/create/",
+        "https://cloudpaymentsapi.kz/api/admin/create/",
         {
           username: username,
           password: password,

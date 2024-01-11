@@ -37,7 +37,7 @@ const GroupEdit: React.FC<GroupEditProps> = ({ id, initialUser, initialVideo,ini
 
   useEffect(() => {
     axios
-      .get(`https://tabscreen-production.up.railway.app/api/admin/user/`, {
+      .get(`https://cloudpaymentsapi.kz/api/admin/user/`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -49,7 +49,7 @@ const GroupEdit: React.FC<GroupEditProps> = ({ id, initialUser, initialVideo,ini
         console.error("Error:", error);
       });
     axios
-      .get(`https://tabscreen-production.up.railway.app/api/admin/video/`, {
+      .get(`https://cloudpaymentsapi.kz/api/admin/video/`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -93,7 +93,7 @@ const GroupEdit: React.FC<GroupEditProps> = ({ id, initialUser, initialVideo,ini
   const handleCreateGroup = () => {
     axios
       .put(
-        `https://tabscreen-production.up.railway.app/api/admin/group/${id}/`,
+        `https://cloudpaymentsapi.kz/api/admin/group/${id}/`,
         {
           title: title,
           users: selectedUser,

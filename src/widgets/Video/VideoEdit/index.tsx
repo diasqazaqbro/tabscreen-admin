@@ -23,7 +23,7 @@ const VideoEdit: React.FC<VideoEditProps> = ({id}) => {
   const handleCreateGroup = () => {
     axios
       .put(
-        `https://tabscreen-production.up.railway.app/api/admin/video/${id}/`,
+        `https://cloudpaymentsapi.kz/api/admin/video/${id}/`,
         {
           title: 'das',
         },

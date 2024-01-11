@@ -32,7 +32,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://tabscreen-production.up.railway.app/api/admin/token/",
+        "https://cloudpaymentsapi.kz/api/admin/token/",
         {
           username: username,
           password: password,

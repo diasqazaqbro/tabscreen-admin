@@ -37,7 +37,7 @@ const UserEdit: React.FC<UserEditProps> = ({ id, groupId, name, mac,roleId }) =>
   const handleCreateGroup = () => {
     axios
       .put(
-        `https://tabscreen-production.up.railway.app/api/admin/user/${id}/`,
+        `https://cloudpaymentsapi.kz/api/admin/user/${id}/`,
         {
           username: username,
           role: selectedRole,
@@ -72,7 +72,7 @@ const UserEdit: React.FC<UserEditProps> = ({ id, groupId, name, mac,roleId }) =>
 
   useEffect(() => {
     axios
-      .get("https://tabscreen-production.up.railway.app/api/admin/group/", {
+      .get("https://cloudpaymentsapi.kz/api/admin/group/", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

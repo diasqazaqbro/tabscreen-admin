@@ -22,7 +22,7 @@ const UserList = () => {
   const token = getToken();
   useEffect(() => {
     axios
-      .get("https://tabscreen-production.up.railway.app/api/admin/user/", {
+      .get("https://cloudpaymentsapi.kz/api/admin/user/", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -35,7 +35,7 @@ const UserList = () => {
         console.error("Error:", error);
       });
     axios
-      .get("https://tabscreen-production.up.railway.app/api/admin/group/", {
+      .get("https://cloudpaymentsapi.kz/api/admin/group/", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

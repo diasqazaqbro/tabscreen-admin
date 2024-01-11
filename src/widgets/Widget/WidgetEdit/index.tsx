@@ -24,7 +24,7 @@ const WidgetEdit: React.FC<WidgetEditProps> = ({id}) => {
   const handleCreateGroup = () => {
     axios
       .put(
-        `https://tabscreen-production.up.railway.app/api/admin/widget/${id}/`,
+        `https://cloudpaymentsapi.kz/api/admin/widget/${id}/`,
         {
           title: title,
         },

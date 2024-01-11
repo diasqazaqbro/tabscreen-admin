@@ -23,7 +23,7 @@ const UserDelete:React.FC<UserDeleteProps> = ({name, id}) => {
   const handleCreateGroup = () => {
     axios
       .delete(
-        `https://tabscreen-production.up.railway.app/api/admin/user/${id}/`,
+        `https://cloudpaymentsapi.kz/api/admin/user/${id}/`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

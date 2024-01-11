@@ -18,7 +18,7 @@ const WidgetList = () => {
   const token = getToken();
   useEffect(() => {
     axios
-      .get("https://tabscreen-production.up.railway.app/api/admin/widget/", {
+      .get("https://cloudpaymentsapi.kz/api/admin/widget/", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

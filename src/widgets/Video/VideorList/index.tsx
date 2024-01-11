@@ -16,13 +16,14 @@ const VideoList = () => {
   const token = getToken();
   useEffect(() => {
     axios
-      .get("https://tabscreen-production.up.railway.app/api/admin/video/", {
+      .get("https://cloudpaymentsapi.kz/api/admin/video/", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
       })
       .then((response) => {
         setVideos(response.data);
+        console.log(response.data);
       })
       .catch((error) => {
         console.error("Error:", error);

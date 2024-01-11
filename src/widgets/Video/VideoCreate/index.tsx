@@ -20,7 +20,7 @@ const VideoCreate = () => {
   const handleCreateGroup = () => {
     axios
       .post(
-        "https://tabscreen-production.up.railway.app/api/admin/video/create/",
+        "https://cloudpaymentsapi.kz/api/admin/video/create/",
         {
           title: title,
         },

@@ -23,7 +23,7 @@ const VideoDelete:React.FC<VideoDeleteProps> = ({name, id}) => {
   const handleCreateGroup = () => {
     axios
       .delete(
-        `https://tabscreen-production.up.railway.app/api/admin/video/${id}/`,
+        `https://cloudpaymentsapi.kz/api/admin/video/${id}/`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

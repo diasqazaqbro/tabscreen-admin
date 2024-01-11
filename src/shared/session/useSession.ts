@@ -44,7 +44,7 @@ const useSession = (): ISessionHook => {
       try {
         const token = getToken();
         if (token) {
-          const response = await axios.get('https://tabscreen-production.up.railway.app/api/admin/current_user/', {
+          const response = await axios.get('https://cloudpaymentsapi.kz/api/admin/current_user/', {
             headers: {
               'Authorization': `Bearer ${token}`,
             },
